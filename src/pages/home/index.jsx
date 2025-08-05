@@ -34,9 +34,9 @@ const Home = () => {
                 </tr>
               </thead>
               <tbody>
-                {users.map((u, i) => (
+                {users.map((u, inx) => (
                   <tr
-                    key={i}
+                    key={inx}
                     className="border-b hover:bg-indigo-50 transition-colors duration-200"
                   >
                     <td className="py-3 px-6">{u.name}</td>
@@ -45,7 +45,7 @@ const Home = () => {
                     <td className="py-3 px-6">
                       <button
                         className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-1 rounded shadow transition"
-                        onClick={() => dispatch(deleteUser(i))}
+                        onClick={() => dispatch(deleteUser(inx))}
                       >
                         Delete
                       </button>

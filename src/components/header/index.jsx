@@ -3,13 +3,14 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="bg-indigo-700 text-white shadow-md">
-      <div className=" mx-auto flex items-center justify-between py-4 px-6">
+    <header className="bg-indigo-700 text-white shadow-md ">
+      <div className="container">
+        <div className=" mx-auto flex items-center justify-between py-4 px-6 ">
         <div className="text-2xl font-bold cursor-pointer">
-          Logoo
+          <NavLink to={"/"}>Logoo</NavLink>
         </div>
         <nav className="space-x-6">
-          <NavLink
+          {/* <NavLink
             to="/"
             end
             className={({ isActive }) =>
@@ -19,7 +20,7 @@ const Header = () => {
             }
           >
             Home
-          </NavLink>          
+          </NavLink>           */}
           <NavLink
             to="/about"
             className={({ isActive }) =>
@@ -31,9 +32,7 @@ const Header = () => {
             About
           </NavLink>
         </nav>
-        <button className="bg-white text-indigo-700 px-4 py-2 rounded font-semibold hover:bg-gray-100 transition">
-          Sign In
-        </button>
+      </div>
       </div>
     </header>
   );
